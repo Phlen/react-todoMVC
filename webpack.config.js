@@ -13,7 +13,7 @@ var webpack = require('webpack'),
 
 module.exports = {
     entry: {
-        path: path.join(__dirname, './src/app/app.es6')
+        path: path.join(__dirname, './src/app/app')
     },
     output: {
         path: path.join(__dirname, './dist/'),
@@ -30,9 +30,17 @@ module.exports = {
             {
                 test: /\.coffee$/,
                 loader: 'coffee-loader'
+            },
+            {
+                test: /\.css$/, 
+                loader: 'style!css'
             }
         ]
     },
+    resolve: {
+        extensions: ['', '.js', '.coffee', '.es6']
+    },
+
     plugins:[
         new HtmlWebpackPlugin({
             filename: 'index.html',
