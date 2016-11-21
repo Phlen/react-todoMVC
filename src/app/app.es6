@@ -1,4 +1,4 @@
-// console.log('hello world')
+console.log('hello react')
 
 import React from 'react'
 import { render } from 'react-dom'
@@ -14,5 +14,5 @@ render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('main')
 )

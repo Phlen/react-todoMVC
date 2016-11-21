@@ -67,8 +67,5 @@ module.exports.devServer = {
     publicPath: "",
     stats: {
         colors: true
-    },
-    plugins: [
-    new webpack.HotModuleReplacementPlugin()
-    ]
+    }
 };
