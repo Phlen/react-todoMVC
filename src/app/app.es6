@@ -9,10 +9,10 @@ import reducer from '../reducers'
 import 'todomvc-app-css/index.css'
 
 const store = createStore(reducer)
-
 render(
-  <Provider store={store}>
+    <Provider store={store}>
     <App />
-  </Provider>,
+    </Provider>,
+
   document.getElementById('main')
 )

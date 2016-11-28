@@ -18,6 +18,7 @@
     "homepage": "",
     "dependencies": {
         "babel-preset-react": "^6.16.0",
+        "classnames": "^2.2.5",
         "fs": "^0.0.1-security",
         "html-webpack-plugin": "^2.24.1"
     },

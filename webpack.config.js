@@ -9,12 +9,28 @@ var webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     path = require('path');
 
-    var dashboard = new Dashboard();
+var dashboard = new Dashboard();
+
+// var getEntry = function() {
+//     var entry = {};
+//     //读取开发目录,并进行路径裁剪
+//     glob.sync('./src/**/*.es6')
+//         .forEach(function(name) {
+//             var start = name.indexOf('src/') + 4,
+//                 end = name.length - 3;
+//             var n = name.slice(start, end);
+//             n = n.slice(0, n.lastIndexOf('/'));
+//             //保存各个组件的入口
+//             entry[n] = name;
+//         });
+//     return entry;
+// };
 
 module.exports = {
     entry: {
         path: path.join(__dirname, './src/app/app')
     },
+    // entry: getEntry(),
     output: {
         path: path.join(__dirname, './dist/'),
         filename: 'app.js'
@@ -24,8 +40,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.es6$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
+                loader: 'babel-loader'
             },
             {
                 test: /\.coffee$/,
